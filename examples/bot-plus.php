@@ -218,6 +218,17 @@ try {
                             ])
                     );
                     break;
+                    case 9:
+                    $client->sendMessage(
+                        (new \Viber\Api\Message\File())
+                            ->setSender($botSender)
+                            ->setReceiver($receiverId)
+                            ->setMedia('http://techslides.com/demos/sample-videos/small.mp4')
+                            ->setFileName('video.mp4')
+                            ->setSize(2 * 1024 * 1024)
+                    );
+                    break;
+                //
             }
         })
         ->run();
